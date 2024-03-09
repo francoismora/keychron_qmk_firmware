@@ -42,3 +42,20 @@
 #    define CKLED2001_CURRENT_TUNE  { 0x60, 0x60, 0x60, 0x60, 0x60, 0x60, 0x60, 0x60, 0x60, 0x60, 0x60, 0x60 }
 
 #endif
+
+// --------- Software Features > Tap-Hold Configuration
+
+// The time to decide between tap and hold
+#define TAPPING_TERM 200
+#define IGNORE_MOD_TAP_INTERRUPT
+
+// Deactivate repeating the key on hold
+#define QUICK_TAP_TERM 0
+
+// Activate ignoring the TAPPING_TERM when another key is pressed and released while holding the tap-hold key
+#define PERMISSIVE_HOLD
+
+// --------- Software Features > Caps Word
+
+// Shift during CapsWord unshift but doesn't stop CapsWord
+#define CAPS_WORD_INVERT_ON_SHIFT
