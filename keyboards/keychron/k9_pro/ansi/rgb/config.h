@@ -55,7 +55,6 @@
 
 // The time to decide between tap and hold
 #define TAPPING_TERM 200
-#define IGNORE_MOD_TAP_INTERRUPT
 
 // Deactivate repeating the key on hold
 #define QUICK_TAP_TERM 0
