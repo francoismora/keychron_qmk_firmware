@@ -64,23 +64,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,  _______,  _______,                                _______,                                _______,  _______,  _______,  _______),
 
     [WIN_FN] = LAYOUT_61_ansi(
-        KC_GRV,   KC_BRID,  KC_BRIU,  KC_TASK,  KC_FILE,  RGB_VAD,  RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,  KC_VOLU,  KC_DEL, 
-        _______,  BT_HST1,  BT_HST2,  BT_HST3,  _______,  _______,  KC_PLUS,  KC_LCBR,  KC_RCBR,  KC_DQT,   KC_PIPE,  _______,  _______,  _______,
-        RGB_TOG,  RGB_MOD,  RGB_VAI,  RGB_HUI,  RGB_SAI,  RGB_SPI,  KC_EQUAL, KC_LPRN,  KC_RPRN,  KC_QUOTE, KC_BSLS,  _______,            _______,
-        _______,            RGB_RMOD, RGB_VAD,  RGB_HUD,  RGB_SAD,  _______,  KC_MINUS, KC_LBRC,  KC_RBRC,  KC_GRV,   KC_SLSH,            _______,
+        KC_GRV,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,   KC_DEL, 
+        _______,  _______,  _______,  _______,  _______,  _______,  KC_PLUS,  KC_LCBR,  KC_RCBR,  KC_DQT,   KC_PIPE,  _______,  _______,  _______,
+        _______,  _______,  _______,  _______,  _______,  _______,  KC_EQUAL, KC_LPRN,  KC_RPRN,  KC_QUOTE, KC_BSLS,  _______,            _______,
+        _______,            _______,  _______,  _______,  _______,  _______,  KC_MINUS, KC_LBRC,  KC_RBRC,  KC_GRV,   KC_SLSH,            _______,
         _______,  _______,  _______,                                _______,                                _______,  _______,  _______,  _______),
 
     [L_FN1] = LAYOUT_61_ansi(
-        KC_GRV,   _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_DEL,
-        _______,  KC_F12,   KC_F7,    KC_F8,    KC_F9,    _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
-        _______,  KC_F11,   KC_F4,    KC_F5,    KC_F6,    _______,  _______,  _______,  _______,  _______,  _______,  _______,            _______,
-        _______,            KC_F10,   KC_F1,    KC_F2,    KC_F3,    BAT_LVL,  _______,  _______,  _______,  _______,  _______,            _______,
+        KC_GRV,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,   KC_DEL, 
+        _______,  KC_LT,    KC_AMPR,  KC_ASTR,  KC_GT,    KC_COLN,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
+        _______,  KC_UNDS,  KC_DLR,   KC_PERC,  KC_CIRC,  _______,  _______,  _______,  _______,  _______,  _______,  _______,            _______,
+        _______,            KC_QUES,  KC_EXLM,  KC_AT,    KC_HASH,  _______,  _______,  _______,  _______,  _______,  _______,            _______,
         _______,  _______,  _______,                                _______,                                _______,  _______,  _______,  _______),
 
     [WIN_UP] = LAYOUT_61_ansi(
-        KC_GRV,   _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_DEL,
-        _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_BSPC,  KC_DEL,   KC_ENT,   KC_INS,   _______,  _______,  _______,
-        _______,  _______,  _______,  _______,  _______,  _______,  KC_WH_U,  KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  _______,            _______,
-        _______,            _______,  _______,  _______,  _______,  _______,  KC_WH_D,  KC_HOME,  KC_PGDN,  KC_PGUP,  KC_END,             _______,
+        KC_GRV,   KC_BRID,  KC_BRIU,  KC_TASK,  KC_FILE,  RGB_VAD,  RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,  KC_VOLU,  KC_DEL, 
+        RGB_MOD,  BT_HST1,  BT_HST2,  BT_HST3,  RGB_VAI,  RGB_HUI,  RGB_SAI,  KC_BSPC,  KC_DEL,   KC_ENT,   KC_INS,   _______,  _______,  _______,
+        RGB_TOG,  _______,  _______,  _______,  _______,  RGB_SPI,  KC_WH_U,  KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  _______,            _______,
+        _______,            RGB_RMOD, RGB_VAD,  RGB_HUD,  RGB_SAD,  BAT_LVL,  KC_WH_D,  KC_HOME,  KC_PGDN,  KC_PGUP,  KC_END,             _______,
         _______,  _______,  _______,                                _______,                                _______,  _______,  _______,  _______),
     };
