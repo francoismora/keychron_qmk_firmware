@@ -53,19 +53,25 @@ enum custom_keycodes {
 #define CAPS_SFT LSFT_T(KC_CAPS)
 
 // Symbol Left Mod-Tap key
-#define SMBL_SPC LT(_SYMB_L, KC_SPC)
+#define SMBL_BKS LT(_SYMB_L, KC_BSPC)
 
 // Symbol Right Mod-Tap key
 #define SMBR_SPC LT(_SYMB_R, KC_SPC)
 
 // Navigation Mod-Tap key
-#define NAV_ENT LT(_NAV, KC_ENT)
+#define NAV_TAB LT(_NAV, KC_TAB)
 
 // Mouse Mod-Tap key
 #define MS_ENT LT(_MOUSE, KC_ENT)
 
 // Adjust layer key
 #define ADJ_L MO(_ADJUST)
+
+// One hand shortcuts
+#define OH_UNDO  LCTL(KC_Z)
+#define OH_CUT   LCTL(KC_X)
+#define OH_COPY  LCTL(KC_C)
+#define OH_PASTE LCTL(KC_V)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -75,11 +81,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐                         ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_INS  ,KC_Q    ,KC_W    ,KC_E    ,KC_R    ,KC_T    ,KC_ESC  ,                          KC_DEL  ,KC_Y    ,KC_U    ,KC_I    ,KC_O    ,KC_P    ,KC_LBRC ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┤                         ├────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_HOME ,HOME_A  ,HOME_S  ,HOME_D  ,HOME_F  ,KC_G    ,KC_TAB  ,                          KC_BSPC ,KC_H    ,HOME_J  ,HOME_K  ,HOME_L  ,HOME_SCL,KC_PGUP ,
+     CAPS_SFT,HOME_A  ,HOME_S  ,HOME_D  ,HOME_F  ,KC_G    ,KC_TAB  ,                          KC_BSPC ,KC_H    ,HOME_J  ,HOME_K  ,HOME_L  ,HOME_SCL,KC_PGUP ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_END  ,KC_Z    ,KC_X    ,KC_C    ,KC_V    ,KC_B    ,SMBR_SPC,XXXXXXX ,        MS_ENT  ,SMBL_SPC,KC_N    ,KC_M    ,KC_COMM ,KC_DOT  ,KC_SLSH ,KC_PGDN ,
+     KC_END  ,KC_Z    ,KC_X    ,KC_C    ,KC_V    ,KC_B    ,SMBR_SPC,XXXXXXX ,        MS_ENT  ,SMBL_BKS,KC_N    ,KC_M    ,KC_COMM ,KC_DOT  ,KC_SLSH ,KC_PGDN ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
-     KC_LCTL ,KC_LGUI ,KC_LALT ,ADJ_L   ,     CAPS_SFT,    XXXXXXX ,NAV_ENT ,        MS_ENT  ,SMBL_SPC,    KC_DEL  ,     KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT 
+     KC_LCTL ,KC_LGUI ,KC_LALT ,ADJ_L   ,     KC_ESC  ,    XXXXXXX ,NAV_TAB ,        MS_ENT  ,SMBL_BKS,    KC_DEL  ,     KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT 
   //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
   ),
 
@@ -119,7 +125,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┤                         ├────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      XXXXXXX ,_______ ,_______ ,_______ ,_______ ,XXXXXXX ,XXXXXXX ,                          _______ ,_______ ,KC_LPRN ,KC_RPRN ,KC_QUOTE,KC_BSLS ,_______ ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,        XXXXXXX ,XXXXXXX ,_______ ,KC_LBRC ,KC_RBRC ,KC_GRV  ,_______ ,_______ ,
+     XXXXXXX ,OH_UNDO ,OH_CUT  ,OH_COPY ,OH_PASTE,XXXXXXX ,XXXXXXX ,XXXXXXX ,        XXXXXXX ,XXXXXXX ,_______ ,KC_LBRC ,KC_RBRC ,KC_GRV  ,_______ ,_______ ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
      XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,     XXXXXXX ,    XXXXXXX ,XXXXXXX ,        _______ ,_______ ,    _______ ,     _______ ,_______ ,_______ ,_______ 
   //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
